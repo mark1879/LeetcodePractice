@@ -12,6 +12,7 @@ echo ${curr_work_path}
 cmake ..
 make
 
-${build_dir_path}/bin/test_two_sum
+# ${build_dir_path}/bin/test_two_sum
 
+${build_dir_path}/bin/test_add_two_numbers
 

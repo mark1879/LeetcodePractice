@@ -6,6 +6,8 @@ set(CMAKE_CXX_STANDARD 11)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
 
+include_directories(${PROJECT_SOURCE_DIR})
+
 find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS})
 
@@ -16,3 +18,4 @@ include_directories(${GTEST_INCLUDE_DIRS})
 # MESSAGE(${GTEST_MAIN_LIBRARIES})
 
 add_subdirectory(two_sum/)
+add_subdirectory(add_two_numbers/)
