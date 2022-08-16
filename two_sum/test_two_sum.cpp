@@ -1,29 +1,26 @@
 #include "two_sum.hpp"
 #include <gtest/gtest.h>
 
-int main() {
+using namespace std;
 
-    cout << "test two_sum..." << endl;
-
+void TestCase(vector<int> vec, int target, vector<int> ans) {
     TwoSum two_sum;
 
-    vector<int> vec1 = {2, 7, 11, 15};
-    auto ans1 = two_sum.Solution(vec1, 9);
-    EXPECT_EQ(ans1.size(), 2);
-    EXPECT_EQ(ans1[0], 0);
-    EXPECT_EQ(ans1[1], 1);
+    auto result = two_sum.Solution(vec, target);
+    EXPECT_EQ(result.size(), 2);
+    EXPECT_EQ(result[0], ans[0]);
+    EXPECT_EQ(result[1], ans[1]);
+}
 
-    vector<int> vec2 = {3, 2, 4};
-    auto ans2 = two_sum.Solution(vec2, 6);
-    EXPECT_EQ(ans2.size(), 2);
-    EXPECT_EQ(ans2[0], 1);
-    EXPECT_EQ(ans2[1], 2);
+int main() {
 
-    vector<int> vec3 = {3, 3};
-    auto ans3 = two_sum.Solution(vec3, 6);
-    EXPECT_EQ(ans3.size(), 2);
-    EXPECT_EQ(ans3[0], 0);
-    EXPECT_EQ(ans3[1], 1);
+    cout << "<<<<<< test_two_sum" << endl;
+
+    TestCase({2, 7, 11, 15}, 9, {0, 1});
+    TestCase({3, 2, 4}, 6, {1, 2});
+    TestCase({3, 3}, 6, {0, 1});
+
+    cout << "<<<<<< test done!" << endl << endl;
 
     return 0;
 }
