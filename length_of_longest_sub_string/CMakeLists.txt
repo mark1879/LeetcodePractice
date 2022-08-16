@@ -1,0 +1,5 @@
+
+add_executable(test_length_of_longest_sub_string test_length_of_longest_sub_string.cpp)
+
+target_link_libraries(test_length_of_longest_sub_string ${GTEST_BOTH_LIBRARIES})
+
