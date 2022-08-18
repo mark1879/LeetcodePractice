@@ -14,7 +14,7 @@ void TestCase(vector<int> vec, int target, vector<int> ans) {
 
 int main() {
 
-    cout << "<<<<<< test_two_sum" << endl;
+    cout << "<<<<<< test_two_sum..." << endl;
 
     TestCase({2, 7, 11, 15}, 9, {0, 1});
     TestCase({3, 2, 4}, 6, {1, 2});

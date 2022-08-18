@@ -44,7 +44,7 @@ void TestCase(vector<int> vec1, vector<int> vec2, vector<int> ans) {
 
 int main() {
 
-    cout << "<<<<<< test_add_two_numbers" << endl;
+    cout << "<<<<<< test_add_two_numbers..." << endl;
 
     TestCase({2, 4, 3}, {5, 6, 4}, {7, 0, 8});
     TestCase({0}, {0}, {0});

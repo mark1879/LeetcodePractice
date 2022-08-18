@@ -12,7 +12,7 @@ void TestCase(string s, int ans) {
 
 int main() {
 
-    cout << "<<<<<< test_length_of_longest_sub_string" << endl;
+    cout << "<<<<<< test_length_of_longest_sub_string..." << endl;
 
     TestCase("abcabcbb", 3);
     TestCase("bbbbb", 1);
