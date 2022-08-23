@@ -17,3 +17,4 @@ ${build_dir_path}/bin/test_add_two_numbers
 ${build_dir_path}/bin/test_length_of_longest_sub_string
 ${build_dir_path}/bin/test_max_area
 ${build_dir_path}/bin/test_can_jump
+${build_dir_path}/bin/test_jump
