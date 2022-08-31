@@ -17,7 +17,7 @@ int main() {
     TestCase({0}, 0);
     TestCase({1, 2, 3}, 2);
 
-    cout << "test done!" << endl;
+    cout << "test done!" << endl << endl;;
 
     return 0;
 }
