@@ -1,0 +1,3 @@
+add_executable(test_can_complete_circuit test_can_complete_circuit.cpp)
+
+target_link_libraries(test_can_complete_circuit ${GTEST_BOTH_LIBRARIES})
