@@ -1,0 +1,3 @@
+add_executable(test_largest_number test_largest_number.cpp)
+
+target_link_libraries(test_largest_number ${GTEST_BOTH_LIBRARIES})

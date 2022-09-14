@@ -20,5 +20,6 @@ ${build_dir_path}/bin/test_can_jump
 ${build_dir_path}/bin/test_jump
 ${build_dir_path}/bin/test_is_match
 ${build_dir_path}/bin/test_can_complete_circuit
+${build_dir_path}/bin/test_largest_number
 
 
