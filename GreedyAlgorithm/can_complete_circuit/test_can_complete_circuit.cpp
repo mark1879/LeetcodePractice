@@ -10,7 +10,7 @@ void TestCase(vector<int> gas, vector<int> cost, int ans) {
 
 int main() {
 
-    cout << "test_can_complete_circuit..." << endl;
+    cout << "<<<<<< test_can_complete_circuit..." << endl;
 
     TestCase({1, 2, 3, 4, 5}, {3, 4, 5, 1, 2}, 3);
     TestCase({2, 3, 4}, {3, 4, 3}, -1);

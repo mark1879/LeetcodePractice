@@ -20,7 +20,7 @@ int main() {
     TestCase({3, 2, 4}, 6, {1, 2});
     TestCase({3, 3}, 6, {0, 1});
 
-    cout << "<<<<<< test done!" << endl << endl;
+    cout << "test done!" << endl << endl;
 
     return 0;
 }

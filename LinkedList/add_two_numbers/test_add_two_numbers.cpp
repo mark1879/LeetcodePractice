@@ -50,7 +50,7 @@ int main() {
     TestCase({0}, {0}, {0});
     TestCase({9, 9, 9, 9, 9, 9, 9}, {9, 9, 9, 9}, {8, 9, 9, 9, 0, 0, 0, 1});
 
-    cout << "<<<<<< test done!" << endl << endl;
+    cout << "test done!" << endl << endl;
 
     return 0;
 }
