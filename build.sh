@@ -12,6 +12,8 @@ echo ${curr_work_path}
 cmake ..
 make
 
+# ${build_dir_path}/bin/
+
 bin_path=${build_dir_path}/bin/
 for file in ${bin_path}/*
 do 

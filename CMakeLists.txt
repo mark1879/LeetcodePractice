@@ -19,6 +19,6 @@ include_directories(${GTEST_INCLUDE_DIRS})
 
 add_subdirectory(HashTable/)
 add_subdirectory(GreedyAlgorithm/)
-add_subdirectory(LinkedList/)
 add_subdirectory(Strings/)
 add_subdirectory(TwoPointers/)
+add_subdirectory(LinkedList/)
