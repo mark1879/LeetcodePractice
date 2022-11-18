@@ -11,8 +11,8 @@ ListNode* GenerateData(vector<int>& data) {
             head = new ListNode(i);
             curr = head;
         } else {
-            curr->next_ = new ListNode(i);
-            curr = curr->next_;
+            curr->next = new ListNode(i);
+            curr = curr->next;
         }
     }
 
@@ -25,14 +25,14 @@ void TestCase(vector<int> data) {
     ListNode* head = reverse.Solution1(GenerateData(data));
 
     for (auto it = data.crbegin(); it != data.crend(); it++) {
-        EXPECT_EQ(*it, head->val_);
-        head = head->next_;
+        EXPECT_EQ(*it, head->val);
+        head = head->next;
     }
 
     head = reverse.Solution2(GenerateData(data));
     for (auto it = data.crbegin(); it != data.crend(); it++) {
-        EXPECT_EQ(*it, head->val_);
-        head = head->next_;
+        EXPECT_EQ(*it, head->val);
+        head = head->next;
     }
 }
 

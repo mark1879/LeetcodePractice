@@ -1,5 +1,13 @@
 #ifndef REVERSE_LIST_HPP
 #define REVERSE_LIST_HPP
+/**
+ * 206. 反转链表
+ * 给你单链表的头节点 head ，请你反转链表，并返回反转后的链表。
+ * 
+ * 提示：
+ * 链表中节点的数目范围是 [0, 5000]
+ * -5000 <= Node.val <= 5000
+ */
 
 #include <iostream>
 #include "list_node.hpp"
@@ -12,8 +20,8 @@ public:
         ListNode* next = nullptr;
 
         while (head != nullptr) {
-            ListNode* tmp = head->next_;
-            head->next_ = next;
+            ListNode* tmp = head->next;
+            head->next = next;
             next = head;
             head = tmp;
         }
@@ -22,13 +30,13 @@ public:
     }
 
     ListNode* Solution2(ListNode* head) {
-        if (!head || !head->next_) {
+        if (!head || !head->next) {
             return head;
         }
 
-        ListNode* new_head = Solution2(head->next_);
-        head->next_->next_ = head;
-        head->next_ = nullptr;
+        ListNode* new_head = Solution2(head->next);
+        head->next->next = head;
+        head->next = nullptr;
 
         return new_head;
     }

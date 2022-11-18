@@ -1,0 +1,4 @@
+add_executable(test_remove_nth_from_end test_remove_nth_from_end.cpp)
+
+target_link_libraries(test_remove_nth_from_end ${GTEST_BOTH_LIBRARIES})
+
