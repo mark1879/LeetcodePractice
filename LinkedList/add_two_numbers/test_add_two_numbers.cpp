@@ -1,29 +1,15 @@
 #include <gtest/gtest.h>
 #include <vector>
 #include "add_two_numbers.hpp"
+#include "list_node.hpp"
 
 using namespace std;
-
-ListNode* InitList(vector<int>& vec) {
-    if (vec.size() == 0)
-        return nullptr;
-
-    ListNode* head = new ListNode(vec[0]);
-    ListNode* tail = head;
-
-    for (auto it = (vec.cbegin() + 1); it  != vec.cend(); it++) {
-        tail->next = new ListNode(*it);
-        tail = tail->next;
-    }
-
-    return head;
-}
 
 void TestCase(vector<int> vec1, vector<int> vec2, vector<int> ans) {
     AddTwoNumbers add_two_numbers;
 
-    ListNode* l1 = InitList(vec1);
-    ListNode* l2 = InitList(vec2);
+    ListNode* l1 = GenerateList(vec1);
+    ListNode* l2 = GenerateList(vec2);
 
     ListNode* head = add_two_numbers.Solution(l1, l2);
     ListNode* tail = head;
@@ -34,12 +20,7 @@ void TestCase(vector<int> vec1, vector<int> vec2, vector<int> ans) {
         tail = tail->next;
     }
 
-    while (head) {
-        ListNode* tmp = head;
-        head = head->next;
-        free(tmp);
-    }
-
+    FreeList(head);
 }
 
 int main() {

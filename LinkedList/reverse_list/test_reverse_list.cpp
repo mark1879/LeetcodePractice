@@ -1,48 +1,37 @@
 #include "reverse_list.hpp"
 #include <vector>
 #include <gtest/gtest.h>
+#include <functional>
 
-ListNode* GenerateData(vector<int>& data) {
-    ListNode* head = nullptr;
-    ListNode* curr = nullptr;
+using Solution = std::function<ListNode* (ListNode*)>;
 
-    for (auto i : data) {
-        if (head == nullptr) {
-            head = new ListNode(i);
-            curr = head;
-        } else {
-            curr->next = new ListNode(i);
-            curr = curr->next;
-        }
-    }
+void TestCase(vector<int> data, Solution solution) {
+    ListNode* list = GenerateList(data);
 
-    return head;
-}
-
-void TestCase(vector<int> data) {
-    ReverseList reverse;
-
-    ListNode* head = reverse.Solution1(GenerateData(data));
+    ListNode* head = solution(list);
+    ListNode* cur = head;
 
     for (auto it = data.crbegin(); it != data.crend(); it++) {
-        EXPECT_EQ(*it, head->val);
-        head = head->next;
+        EXPECT_EQ(*it, cur->val);
+        cur = cur->next;
     }
 
-    head = reverse.Solution2(GenerateData(data));
-    for (auto it = data.crbegin(); it != data.crend(); it++) {
-        EXPECT_EQ(*it, head->val);
-        head = head->next;
-    }
+    FreeList(head);
 }
 
 int main() {
-
     cout << "test_reverse_list..." << endl;
 
-    TestCase({1, 2, 3, 4, 5});
-    TestCase({1});
-    TestCase({});
+    ReverseList reverse;
+
+    TestCase({1, 2, 3, 4, 5}, std::bind(&ReverseList::Solution1, reverse, std::placeholders::_1));
+    TestCase({1, 2, 3, 4, 5}, std::bind(&ReverseList::Solution2, reverse, std::placeholders::_1));
+
+    TestCase({1}, std::bind(&ReverseList::Solution1, reverse, std::placeholders::_1));
+    TestCase({1}, std::bind(&ReverseList::Solution2, reverse, std::placeholders::_1));
+
+    TestCase({}, std::bind(&ReverseList::Solution1, reverse, std::placeholders::_1));
+    TestCase({}, std::bind(&ReverseList::Solution2, reverse, std::placeholders::_1));
 
     cout << "test done!" << endl << endl;
 
