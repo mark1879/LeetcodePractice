@@ -8,7 +8,7 @@ void TestSolution(vector<int> vec, string ans) {
 }
 
 int main() {
-    cout << "test_largest_number..." << endl;
+    cout << "<<<<<< test_largest_number..." << endl;
 
     TestSolution({10, 2}, "210");
     TestSolution({3, 30, 34, 5, 9}, "9534330");

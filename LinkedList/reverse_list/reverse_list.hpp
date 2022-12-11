@@ -17,16 +17,27 @@ using namespace std;
 class ReverseList {
 public:
     ListNode* Solution1(ListNode* head) {
-        ListNode* next = nullptr;
+        // ListNode* next = nullptr;
 
-        while (head != nullptr) {
-            ListNode* tmp = head->next;
-            head->next = next;
-            next = head;
-            head = tmp;
+        // while (head != nullptr) {
+        //     ListNode* tmp = head->next;
+        //     head->next = next;
+        //     next = head;
+        //     head = tmp;
+        // }
+
+        // return next;
+
+        ListNode* prev = nullptr;
+        ListNode* curr = head;
+        while (curr) {
+            ListNode* next = curr->next;
+            curr->next = prev;
+            prev = curr;
+            curr = next;
         }
-
-        return next;
+        
+        return prev;
     }
 
     ListNode* Solution2(ListNode* head) {
