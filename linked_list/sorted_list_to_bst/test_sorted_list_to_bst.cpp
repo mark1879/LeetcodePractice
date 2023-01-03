@@ -1,5 +1,4 @@
 #include "sorted_list_to_bst.hpp"
-#include "sorted_list_to_bst.hpp"
 #include <vector>
 #include <gtest/gtest.h>
 
@@ -10,7 +9,7 @@ void TestCase(vector<int> data, Solution solution) {
     TreeNode* ret = solution(head);
 
     vector<int> ans;
-    InOrderBinaryTree(ret, ans);
+    InOrderBSTree(ret, ans);
 
     EXPECT_EQ(data.size(), ans.size());
 
@@ -19,7 +18,7 @@ void TestCase(vector<int> data, Solution solution) {
     }
 
     FreeList(head);
-    FreeBinaryTree(ret);
+    FreeBSTree(ret);
 }
 
 int main() {

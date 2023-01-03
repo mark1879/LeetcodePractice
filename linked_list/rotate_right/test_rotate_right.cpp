@@ -31,7 +31,7 @@ int main() {
     TestCase({1, 2, 3, 4, 5}, 6, {5, 1, 2, 3, 4}, std::bind(&RotateRight::Solution, rotate, std::placeholders::_1, std::placeholders::_2));
     TestCase({}, 6, {}, std::bind(&RotateRight::Solution, rotate, std::placeholders::_1, std::placeholders::_2));
 
-    cout << "test done!" << endl;
+    cout << "test done!" << endl << endl;
 
     return 0;
 }

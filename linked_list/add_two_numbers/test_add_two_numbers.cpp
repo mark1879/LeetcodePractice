@@ -1,7 +1,6 @@
 #include <gtest/gtest.h>
 #include <vector>
 #include "add_two_numbers.hpp"
-#include "list_node.hpp"
 
 using namespace std;
 

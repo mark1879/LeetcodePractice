@@ -11,8 +11,9 @@
  */
 #include <iostream>
 #include <stack>
-#include "list_node.hpp"
+#include "list.hpp"
 
+using namespace List;
 using namespace std;
 
 class RemoveNthFromEnd {

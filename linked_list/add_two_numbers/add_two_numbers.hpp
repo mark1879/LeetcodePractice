@@ -14,7 +14,9 @@
     题目数据保证列表表示的数字不含前导零。
 */
 
-#include "list_node.hpp"
+#include "list.hpp"
+
+using namespace List;
 
 class AddTwoNumbers {
 public:

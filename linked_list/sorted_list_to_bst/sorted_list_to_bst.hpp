@@ -12,8 +12,12 @@
  */
 
 #include <iostream>
-#include "list_node.hpp"
+#include  "bst_tree.hpp"
+#include "list.hpp"
+
+using namespace List;
 using namespace std;
+using namespace BSTree;
 
 class SortedListToBst {
 private:
