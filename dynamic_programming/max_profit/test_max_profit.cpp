@@ -8,6 +8,7 @@ void TestCase(vector<int> prices, int ans) {
     MaxProfit max_profit;
 
     EXPECT_EQ(max_profit.Solution(prices), ans);
+    EXPECT_EQ(max_profit.Solution2(prices), ans);
 }
 
 int main() {

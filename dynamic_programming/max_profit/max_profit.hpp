@@ -17,13 +17,32 @@ using namespace std;
 
 class MaxProfit {
 public:
+    // 动态规划
     int Solution(vector<int>& prices) {
         int max_profit = 0;
         int min_price = INT_MAX;
 
-        for (auto price : prices) {
+        for (const auto& price : prices)
+        {
             max_profit = max(max_profit, price - min_price);
-            min_price = min(price, min_price);
+            min_price = min(min_price, price);
+        }
+
+        return max_profit;
+    }
+
+    // 暴力搜索
+    int Solution2(std::vector<int>& prices)
+    {
+        int max_profit = 0;
+        int size = (int)prices.size();
+
+        for (int i = 0; i < size - 1; i++)
+        {
+            for (int j = i + 1; j < size; j++)
+            {
+                max_profit = max(max_profit, prices[j] - prices[i]);
+            }
         }
 
         return max_profit;
