@@ -12,27 +12,28 @@
         0 <= prices[i] <= 104
  */
 
+#include <gtest/gtest.h>
+#include <iostream>
 #include <vector>
-using namespace std;
 
 class MaxProfit {
 public:
     // 动态规划
-    int Solution(vector<int>& prices) {
+    static int Solution(std::vector<int>& prices) {
         int max_profit = 0;
         int min_price = INT_MAX;
 
         for (const auto& price : prices)
         {
-            max_profit = max(max_profit, price - min_price);
-            min_price = min(min_price, price);
+            max_profit = std::max(max_profit, price - min_price);
+            min_price = std::min(min_price, price);
         }
 
         return max_profit;
     }
 
     // 暴力搜索
-    int Solution2(std::vector<int>& prices)
+    static int Solution2(std::vector<int>& prices)
     {
         int max_profit = 0;
         int size = (int)prices.size();
@@ -41,11 +42,26 @@ public:
         {
             for (int j = i + 1; j < size; j++)
             {
-                max_profit = max(max_profit, prices[j] - prices[i]);
+                max_profit = std::max(max_profit, prices[j] - prices[i]);
             }
         }
 
         return max_profit;
+    }
+
+    static void Test()
+    {
+        std::cout << "test_max_profit..." << std::endl;
+
+        TestCase({7, 1, 5, 3, 6, 4}, 5);
+        TestCase({7, 6, 4, 3, 1}, 0);
+    }
+
+private:
+    static void TestCase(std::vector<int> prices, int ans) 
+    {
+        EXPECT_EQ(Solution(prices), ans);
+        EXPECT_EQ(Solution2(prices), ans);
     }
 };
 
