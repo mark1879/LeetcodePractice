@@ -2,6 +2,7 @@
 #include "max_profit.hpp"
 #include "max_profit2.hpp"
 #include "max_profit3.hpp"
+#include "max_profit5.hpp"
 
 int main() 
 {
@@ -10,6 +11,7 @@ int main()
     MaxProfit::Test();
     MaxProfit2::Test();
     MaxProfit3::Test();
+    MaxProfit5::Test();
 
     std::cout << "test done!" << std::endl << std::endl;
 
