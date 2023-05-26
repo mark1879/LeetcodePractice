@@ -1,6 +1,3 @@
-add_subdirectory(max_area/)
-add_subdirectory(can_jump/)
-add_subdirectory(jump/)
-add_subdirectory(is_match/)
-add_subdirectory(can_complete_circuit/)
-add_subdirectory(largest_number/)
+add_executable(test_greedy_algorithm test_greedy_algorithm.cpp)
+
+target_link_libraries(test_greedy_algorithm ${GTEST_BOTH_LIBRARIES})
