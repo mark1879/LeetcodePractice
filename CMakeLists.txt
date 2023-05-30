@@ -19,10 +19,10 @@ include_directories(${GTEST_INCLUDE_DIRS})
 
 
 # add_subdirectory(hash_table/)
-# add_subdirectory(greedy_algorithm/)
+add_subdirectory(greedy_algorithm/)
 # add_subdirectory(strings/)
 # add_subdirectory(two_pointers/)
 # add_subdirectory(linked_list/)
 # add_subdirectory(binary_search_tree/)
-add_subdirectory(dynamic_programming/)
+# add_subdirectory(dynamic_programming/)
 # add_subdirectory(prefix_sum/)

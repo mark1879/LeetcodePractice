@@ -1,6 +1,7 @@
 #include <iostream>
 #include "jump.hpp"
 #include "jump2.hpp"
+#include "max_area.hpp"
 
 int main()
 {
@@ -8,6 +9,7 @@ int main()
 
     Jump::Test();
     Jump2::Test();
+    MaxArea::Test();
 
     std::cout << "test done!" << std::endl << std::endl;
 
